@@ -1,0 +1,83 @@
+{% extends 'admintemplates/base.html' %}
+
+{% load static %}
+{% block content %}
+<div class="page-wrapper" style="background-color: #a8aeb6;">
+    <div class="container-fluid">
+        <!-- Title -->
+        <div class="row heading-bg">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+              <h5 class="txt-dark">FoodItem</h5>
+            </div>
+            <!-- Breadcrumb -->
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+              <ol class="breadcrumb">
+                <li><a href="">Dashboard</a></li>
+                <li class="active"><span>FoodItem</span></li>
+                <!-- <li><a href="#"><span>product list</span></a></li> -->
+              </ol>
+            </div>
+            <!-- /Breadcrumb -->
+        </div>
+        <!-- /Title -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default card-view">
+                    <div class="panel-heading">
+                        <div class="pull-left">
+                            <h6 class="panel-title txt-dark">FoodItem</h6>
+                        </div>
+                        <div class="pull-right">
+                            <h6 class="panel-title txt-dark"><a class="btn btn-success" href="{% url 'foodapp:adminfooditemcreate' %}">Add FoodItem</a> </h6>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-wrapper collapse in">
+                        <div class="panel-body">
+                            <div class="table-wrap">
+                                <div class="table-responsive">
+                                    <table id="example" class="table table-hover display pb-30" >
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Category</th>
+                                                <th>Photo</th>
+                                                <th>Price</th>
+                                                <th>Description</th>
+                                                <th>Actions</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for fooditem in fooditemlist %}
+                                            <tr>
+                                        
+                                                <td>{{fooditem.name}}</td>
+                                                <td>{{fooditem.category}}</td>
+                                                <td>{{fooditem.photo}}</td>
+                                                <td>{{fooditem.price}}</td>
+                                                <td>{{fooditem.description}}</td>
+                                                <td> <a href="{% url 'foodapp:adminfooditemupdate' fooditem.pk %}"class="btn btn-success">Update</a>
+                                                    <a href="{% url 'foodapp:adminfooditemdelete' fooditem.pk %}"class="btn btn-success">Delete</a>
+                                                   
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+<!--// main-heading -->
+
+
+
+
+	
+{% endblock %}

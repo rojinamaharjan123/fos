@@ -1,0 +1,44 @@
+{% extends "admintemplates/base.html" %}
+
+
+{% load static %}
+
+
+{% block content %}
+<!--// Inline Form -->
+<div class="page-wrapper" style="background-color: #a8aeb6;">
+	<div class="container-fluid">
+		<!-- Title -->
+		<div class="row heading-bg">
+			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+			  <h5 class="txt-dark">Vendor - <a href="  "><strong>Orders</strong></a> | <a href="  "><small>Shipments</small></a></h5>
+			</div>
+			<!-- Breadcrumb -->
+			<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+			  <ol class="breadcrumb">
+				<li><a href="">Dashboard</a></li>
+				<li class="active"><span>Order-Report</span></li>
+				<!-- <li><a href="#"><span>product list</span></a></li> -->
+			  </ol>
+			</div>
+			<!-- /Breadcrumb -->
+		</div>
+		<!-- /Title -->
+		<div class="container-fluid">
+	<div class="row">
+
+		<!-- Forms-1 -->
+		<div class="outer-w3-agile col-xl mt-3 mr-xl-3">
+			<h4 class="tittle-w3-agileits mb-4">Delete SliderBanner</h4>
+			<form method="post">
+				{% csrf_token %}
+				<h4>Do you  really want to delete?</h4>
+				<button class="btn btn-primary">Yes</button>
+			</form>
+		</div>
+	</div>
+</div>
+	</div>
+</div>
+
+{% endblock %}

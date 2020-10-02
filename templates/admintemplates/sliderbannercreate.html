@@ -1,0 +1,72 @@
+{% extends 'admintemplates/base.html' %}
+
+{% load static %}
+{% block css %}
+<style type="text/css">
+	.btn-margin-top {
+		margin-top: 10px;
+	}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="page-wrapper" style="background-color: #a8aeb6;">
+	<div class="container-fluid">
+		<!-- Title -->
+		<div class="row heading-bg">
+			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+			  <h5 class="txt-dark">AdminPanel <a href="  "><strong>Slider Banner</strong></a> | <a href="  "><small>Create Slider Banner</small></a></h5>
+			</div>
+			<!-- Breadcrumb -->
+			<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+			  <ol class="breadcrumb">
+				<li><a href="">Dashboard</a></li>
+				<li class="active"><span>Create Slider Banner</span></li>
+				<!-- <li><a href="#"><span>product list</span></a></li> -->
+			  </ol>
+			</div>
+			<!-- /Breadcrumb -->
+		</div>
+		<!-- /Title -->
+		<div class="row">
+		    <div class="col-sm-12">
+		        <div class="panel panel-default card-view">
+		            <div class="panel-wrapper collapse in">
+		                <div class="panel-body">
+							<form method="POST" enctype="multipart/form-data">
+								<p class="text-danger">{{form.non_field_errors}}</p>
+								{% csrf_token %}
+								<h6 class="txt-dark capitalize-font"><i class="zmdi zmdi-info-outline mr-10"></i>Slider Create</h6>
+								<hr class="light-grey-hr"/>
+		                    	<div class="row">
+		                    		<div class="col-md-12">
+		                    			<label class="control-label mb-10">Title</label>
+		                    			{{form.title}}
+		                    		</div>
+		                    		<div class="col-md-12">
+		                    			<label class="control-label mb-10">Caption</label>
+		                    			{{form.caption}}
+		                    		</div>
+		                    		<div class="col-md-12">
+		                    			<label class="control-label mb-10">Image</label>
+		                    			{{form.image}}
+		                    		</div>
+		                    	</div>
+
+								
+								<!-- <button class="btn btn-success" style="margin-top: 10px;">Submit</button> -->
+								<!-- <button class="btn btn-success mt-10">Submit</button> -->
+								<button class="btn btn-success  mt-10">
+							Submit</button>
+
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'admintemplates/base.html' %}
+{% block title %}
+Create Restaurant
+{% endblock%}
+
+{% load static %}
+
+{% block content %}
+<div class="page-wrapper" style="background-color: #a8aeb6;">
+	<div class="container-fluid">
+		<!-- Title -->
+		<div class="row heading-bg">
+			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+			  <h5 class="txt-dark">Admin Panel <a href="  "><strong>Restaurant</strong></a> | <a href="  "><small>Create</small></a></h5>
+			</div>
+			<!-- Breadcrumb -->
+			<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+			  <ol class="breadcrumb">
+				<li><a href="">Dashboard</a></li>
+				<li class="active"><span>Create Restaurant</span></li>
+				<!-- <li><a href="#"><span>product list</span></a></li> -->
+			  </ol>
+			</div>
+			<!-- /Breadcrumb -->
+		</div>
+		<!-- /Title -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-default card-view">
+						<div class="panel-wrapper collapse in">
+						<div class="panel-body">
+							<form method="POST" enctype="multipart/form-data">
+								<p class="text-danger">{{form.non_field_errors}}</p>
+								<h6 class="txt-dark capitalize-font"><i class="zmdi zmdi-info-outline mr-10"></i> Create Restaurant</h6>
+								<hr class="light-grey-hr"/>
+		                    	<div class="row">
+		                    		<div class="col-md-12">
+		                    			<label class="control-label mb-10">Name</label>
+		                    			{{form.name}}
+		                    		</div>
+		                    		<div class="col-md-12">
+		                    			<label class="control-label mb-10">Logo</label>
+		                    			{{form.logo}}
+		                    		</div>
+		                    		<div class="col-md-12">
+		                    			<label class="control-label mb-10">email</label>
+		                    			{{form.email}}
+		                    		</div>
+		                    		<div class="col-md-12">
+		                    			<label class="control-label mb-10">Phone</label>
+		                    			{{form.phone}}
+		                    		</div>
+		                    		<div class="col-md-12">
+		                    			<label class="control-label mb-10">Address</label>
+		                    			{{form.address}}
+		                    		</div>
+		                    		<div class="col-md-12">
+		                    			<label class="control-label mb-10">About</label>
+		                    			{{form.about}}
+		                    		</div>
+		                    		<div class="col-md-12">
+		                    			<label class="control-label mb-10">MapLocation</label>
+		                    			{{form.map_location}}
+		                    		</div>
+		                    		<div class="col-md-12">
+		                    			<label class="control-label mb-10">Facebook</label>
+		                    			{{form.facebook}}
+		                    		</div>
+		                    		<div class="col-md-12">
+		                    			<label class="control-label mb-10">Instagram</label>
+		                    			{{form.instagram}}
+		                    		</div>
+		                    		<div class="col-md-12">
+		                    			<label class="control-label mb-10">Youtube</label>
+		                    			{{form.youtube}}
+		                    		</div>
+		                    		<div class="col-md-12">
+		                    			<label class="control-label mb-10">Twitter</label>
+		                    			{{form.twitter}}
+		                    		</div>
+		                    	</div>
+
+								
+								<button class="btn btn-success" style="margin-top: 10px;">Submit</button>
+								<!-- <button class="btn btn-success mt-10">Submit</button> -->
+								<!-- <button class="btn btn-success btn-margin-top
+								">Submit</button> -->
+
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

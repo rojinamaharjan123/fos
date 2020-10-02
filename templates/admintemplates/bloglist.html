@@ -1,0 +1,102 @@
+{% extends 'admintemplates/base.html' %}
+{% block title %}
+Blog List
+{%endblock%}
+
+{% load static %}
+{% block content %}
+<div class="page-wrapper" style="background-color: #a8aeb6;">
+    <div class="container-fluid">
+        <!-- Title -->
+        <div class="row heading-bg">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+              <h5 class="txt-dark">Blog</h5>
+            </div>
+            <!-- Breadcrumb -->
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+              <ol class="breadcrumb">
+                <li><a href="">Dashboard</a></li>
+                <li class="active"><span>Blog</span></li>
+                <!-- <li><a href="#"><span>product list</span></a></li> -->
+              </ol>
+            </div>
+            <!-- /Breadcrumb -->
+        </div>
+        <!-- /Title -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default card-view">
+                    <div class="panel-heading">
+                        <div class="pull-left">
+                            <h6 class="panel-title txt-dark">Blog</h6>
+                        </div>
+                        <div class="pull-right">
+                            <h6 class="panel-title txt-dark"><a class="btn btn-success" href="{% url 'foodapp:adminblogcreate' %}">Add Blog</a> </h6>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    
+                            <div class="maghny-gd-1 col-lg-6">
+                        <div class="row">
+                            {% for Blog in bloglist %}
+                            <div class="maghny-gd-1 col-md-6">
+                                <div class="maghny-grid">
+                                    <figure class="effect-lily">
+                                        <img class="img-fluid" src="{{ Blog.image.url }}">
+                                        <figcaption>
+                                            <div>
+                                                <h4> <span>{{ Blog.title }}</span></h4>
+                                               <!--  <p>{{ articles.created_at|date}} </p> -->
+                                            </div>
+
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <h5 class="top-title"><a href="#">{{ Blog.description|truncatewords:'10' }}</a></h5>
+
+                               <!--  <div class="mag-post-meta mt-3"><span
+                                        class="meta-author text-uppercase"><span>By&nbsp;</span><a href="#"
+                                            class="author-name">{{ articles.author }}</a> </span>
+                                    <span class="author-date">{{ articles.created_at }}</span>
+                                </div> -->
+                                <a href="#" class="read-more btn mt-3">Read More</a>
+                            </div>
+                            {% endfor %}
+                            <!-- <div class="maghny-gd-1 col-md-6">
+                                <div class="maghny-grid">
+                                    <figure class="effect-lily">
+                                        <img class="img-fluid" src="{% static 'clientstatic/images/grid8.jpg' %}">
+                                        <figcaption>
+                                            <div>
+                                                <h4>Man standing on railroad near <span>plants</span></h4>
+                                                <p>Jan.20.2020 </p>
+                                            </div>
+
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <h5 class="top-title"><a href="#">
+                                        There are many variations that focuses on presenting</a></h5>
+                                <div class="mag-post-meta mt-3"> <span
+                                        class="meta-author text-uppercase"><span>By&nbsp;</span><a href="#"
+                                            class="author-name"> John
+                                            Brain</a> </span>
+                                    <span class="author-date">Jan 5, 2020</span>
+                                </div>
+                                <a href="#" class="read-more btn mt-3">Read More</a>
+                            </div> -->
+                        </div>
+                    
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+<!--// main-heading -->
+
+
+
+
+	
+{% endblock %}

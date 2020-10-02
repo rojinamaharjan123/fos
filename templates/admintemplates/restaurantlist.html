@@ -1,0 +1,98 @@
+{% extends 'admintemplates/base.html' %}
+
+{% load static %}
+{% block content %}
+
+<div class="page-wrapper" style="background-color: #a8aeb6;">
+    <div class="container-fluid">
+        <!-- Title -->
+        <div class="row heading-bg">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+              <h5 class="txt-dark">Restaurant<h5>
+            </div>
+            <!-- Breadcrumb -->
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+              <ol class="breadcrumb">
+                <li><a href="">Dashboard</a></li>
+                <li class="active"><span>List Restaurant</span></li>
+                <!-- <li><a href="#"><span>product list</span></a></li> -->
+              </ol>
+            </div>
+            <!-- /Breadcrumb -->
+        </div>
+        <!-- /Title -->
+        <!-- <h1>Welcome to Admin Dashboard</h1> -->
+        <div class="row">
+            <!-- Stats -->
+            <div class="outer-w3-agile col-xl">
+                <div class="work-progres">
+                    <div class="panel panel-default card-view">
+                    <div class="panel-heading">
+                        <div class="pull-left">
+                            <h6 class="panel-title txt-dark">All Restaurant</h6>
+                        </div>
+                         <div class="pull-right">
+                            <h6 class="panel-title txt-dark"><a class=" btn btn-success" href="{% url 'foodapp:adminrestaurantcreate' %}">Add Restaurant </a></h6>
+                        </div>
+                    
+                    <hr>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>logo</th>
+                                    <th>Email</th>
+                                    <!-- <th>Phone</th> -->
+                                    <th>Address</th>
+                                    <!-- <th>About</th>
+                                    <th>Map Location</th>
+                                    <th>Facebook</th>
+                                    <th>Instagram</th>
+                                    <th>Twitter</th>
+                                    <th>Youtube</th> -->
+                                    <th> Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            	{% for restaurant in restaurantlist %}
+                                <tr>
+                                    <td>{{restaurant.name}}</td>
+                                    <td>{{restaurant.logo}}</td>
+                                    <td>{{restaurant.email}}</td>
+                                    <!-- <td>{{restuarant.phone}}</td> -->
+                                    <td>{{restaurant.address}}</td>
+                                    <!-- <td>{{restaurant.about}}</td>
+                                    <td>{{restaurant.map_location}}</td>
+                                    <td>{{restaurant.facebook}}</td>
+                                    <td>{{restaurant.instagram}}</td>
+                                    <td>{{restaurant.twitter}}</td>
+                                    <td>{{restaurant.youtube}}</td> -->
+                                    <td>
+                                        <a href="{% url 'foodapp:adminrestaurantdetail' restaurant.pk %}" class="btn btn-info">Detail</a>
+                                    	<a href="{% url 'foodapp:adminrestaurantupdate' restaurant.pk %}" class="btn btn-info">Update</a>
+                                    	<a href="{% url 'foodapp:adminrestaurantdelete' restaurant.pk %}" class="btn btn-info">Delete</a>
+                                    </td>
+                                   
+       
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--// Stats -->
+        </div>
+    </div>
+</div>
+
+<!-- <h2 class="main-title-w3layouts mb-2 text-center">Restaurant </h2> -->
+<!--// main-heading -->
+<!-- <div class="container-fluid"> -->
+<!-- </div> -->
+
+
+
+	
+{% endblock %}

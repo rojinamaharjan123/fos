@@ -1,0 +1,14 @@
+td{
+	padding: 0!important;
+	margin: 0!important;
+}
+.image-size{
+	height: 150px;
+	width: 150px;
+	left: 200px;
+	object-fit: contain;
+}
+.image-pointer:hover {
+	cursor: pointer;
+	text-decoration-line: underline;
+}

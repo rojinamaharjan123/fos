@@ -1,0 +1,7 @@
+RECEIVER_NAME,RECEIVER_CONTACT_NUMBER,DROPOFF_STREET_ADDRESSS,DROPOFF_CITY,District,PARCEL_TYPE,MODE_OF_PAYMENT,PARCEL_TOTAL,REFERENCE_CODE_OPTIONAL,SHIPMENT_DESCRIPTION_OPTIONAL
+sujan,9810366486,sainbu-5,Bharatpur,Chitwan,Others,Already Paid,5000,Code-1,Description about shipment
+sujan raj,9810203040,bungamati 5,Airport,Kathmandu,Documents,COD,6000,Code-2,Description about shipment
+sujan tulad,9806540654,nakkhipot 8 Lalitpur,Baneshwar,Kathmandu,Clothes,COD,10000,Code-3,Description about shipment
+sujan raj tuladhar ,9806540654,nakkhipot-8 Lalitpur ,Biratnagar,Morang,Clothes ,COD,10000,Code-4 
+sujan raj tuladhar,9806540654,Biratnagar-25 halchowk,Biratnagar,Morang,Clothes,COD,10000
+sujan raj tuladhar,9806540654,Jahada-20 jahadaroad,Jahada,Morang,Clothes,COD,10000

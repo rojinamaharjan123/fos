@@ -1,0 +1,73 @@
+
+
+PLEASE FOLLOW THESE STEPS FOR SUCCESSFUL BULK REQUEST
+-----------------------------------------------------
+Step 1:
+Download sample csv file from the same page. (click 'Download Format' to download csv file)
+
+Step 2:
+Edit that file with text editor.
+Please edit that file with correct formatting.
+
+Step 3:
+After custom edit, 'save as' that file as 'new csv file' with extension '.csv'
+
+Step 4:
+Upload that new '.csv' file and click 'request' button to request shipments.
+------------------------------------------------------
+
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+Correct Format
+-----------------
+RECEIVER NAME,RECEIVER CONTACT NUMBER,DROPOFF STREET ADDRESSS,DROPOFF CITY,District,PARCEL TYPE,MODE OF PAYMENT,PARCEL TOTAL,REFERENCE CODE(OPTIONAL)
+sujan,9810366486,sainbu-5,Bharatpur,Chitwan,Others,Already Paid,5000,shipment code 1
+sujan raj,9810203040,bungamati 5,Airport,Kathmandu,Documents,COD,6000,shipment code 2
+sujan tulad,9806540654,nakkhipot 8 Lalitpur,Baneshwar,Kathmandu,Clothes,COD,10000,shipment code 3
+-----------------
+
+Correct Format Rules:
+
+Rule - 1 :
+	Top-most detailing (RECEIVER NAME,RECEIVER CONTACT, ...) should be remained as it is.
+
+Rule - 2 :
+	A single enter should be made between top-most detailing and first shipment info, and between every consecutive shipment informations.
+
+Rule - 3 :
+	Each shipment detailing element must be seperated by single comma (,) except after the last detail element.
+
+Rule - 4 :
+	Each shipment detailing element mustn't have first white-space.
+Pss:
+	* Fields such as "RECEIVER CONTACT NUMBER, DROPOFF CITY, District, MODE OF PAYMENT" mustn't start/end with white-space
+
+Rule - 5 :
+	Order or shipment detailing elements mustn't be altered. Misplacing of shipment detailing elements arises incorrect information in database and system errors.
+
+Rule - 6 :
+	For correct city, district information, please copy and paste from city,district list from citylist.csv file from the same page.
+
+Rule - 7 :
+	Please provide correct input for each shipment detailing elements to avoid system errors.
+
+Rule - 8 :
+	System only accepts corrected '.csv' format file for bulk upload.
+
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+\************************************************************/
+Note:
+* For correct city,district list, please 'download' city list file from button('Download City List') from the same page.
+
+* Please read all the Correct Format Rules to avoid unsuccessful requests.
+
+* If in any cases:
+	i) error message shown in page,
+	ii) request button is disabled,
+	iii) can't upload file
+	Please, repeat all steps from the beginning appyling correct formatting.
+
+* If the error still persists, please contact your administrator.
+\************************************************************/
+					--- Thank You ---

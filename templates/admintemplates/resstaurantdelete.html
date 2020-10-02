@@ -1,0 +1,23 @@
+{% extends "admintemplates/base.html" %}
+
+
+{% load static %}
+
+
+{% block content %}
+<!--// Inline Form -->
+<div class="container-fluid">
+	<div class="row">
+
+		<!-- Forms-1 -->
+		<div class="outer-w3-agile col-xl mt-3 mr-xl-3">
+			<h4 class="tittle-w3-agileits mb-4">Delete Restaurant</h4>
+			<form action="." method="post">
+				{% csrf_token %}
+				<h4>Do you  really want to delete?</h4>
+				<button class="btn btn-primary">Yes</button>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

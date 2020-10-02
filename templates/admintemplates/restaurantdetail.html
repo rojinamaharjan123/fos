@@ -1,0 +1,104 @@
+{% extends 'admintemplates/base.html' %}
+{% block title %}
+Category Detail 
+{% endblock %}
+
+{% load static %}
+{% block content %}
+
+<div class="page-wrapper" style="background-color: #a8aeb6;">
+    <div class="container-fluid">
+        <!-- Title -->
+        <div class="row heading-bg">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+              <h5 class="txt-dark">Restaurant<h5>
+            </div>
+            <!-- Breadcrumb -->
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+              <ol class="breadcrumb">
+                <li><a href="">Dashboard</a></li>
+                <li class="active"><span>List Restaurant</span></li>
+                <!-- <li><a href="#"><span>product list</span></a></li> -->
+              </ol>
+            </div>
+            <!-- /Breadcrumb -->
+        </div>
+        <!-- /Title -->
+        <!-- <h1>Welcome to Admin Dashboard</h1> -->
+        <div class="row">
+            <!-- Stats -->
+            <div class="outer-w3-agile col-xl">
+                <div class="work-progres">
+                    <div class="panel panel-default card-view">
+                    <div class="panel-heading">
+                        <!-- <div class="pull-left">
+                            <h6 class="panel-title txt-dark">All Restaurant</h6>
+                        </div>
+                         <div class="pull-right">
+                            <h6 class="panel-title txt-dark"><a class=" btn btn-success" href="{% url 'foodapp:adminrestaurantcreate' %}">Add Restaurant </a></h6>
+                        </div> -->
+                    
+                    <hr>
+                    <div class="table-responsive">
+                        <table class=" table table table-hover">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th colspan="4" class="text-center">{{restaurantdetail.name}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th >Name</th>
+                                    <td style="max-width: 200px;"> {{restaurantdetail.name}}</td>
+                                    <th>Address</th>
+                                    <td style="max-width: 200px;">{{restaurantdetail.address}}</td>
+                                </tr>
+                                
+                                <tr>
+                                    <th>Logo</th>
+                                    <td style="max-width: 200px;"><img src="{% if restaurantdetail.logo %} {{restaurantdetail.logo.url}} {% endif %}" alt="No Image"> </td>
+                                    <th>Email</th>
+                                    <td style="max-width: 200px;">{{restaurantdetail.email}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Phone</th>
+                                    <td style="max-width: 200px;">{{restaurantdetail.phone}}</td>
+                                    <th>About</th>
+                                    <td style="max-width: 200px;">{{restaurantdetail.about}}</td>
+                                </tr>
+                                 <tr>
+                                    <th>Map Location</th>
+                                    <td style="max-width: 200px;">{{restaurantdetail.map_location}}</td>
+                                    <th>Facebook</th>
+                                    <td style="max-width: 200px;">{{restaurantdetail.facebook}}</td>
+                                </tr>
+                                 <tr>
+                                    <th>Instagram</th>
+                                    <td style="max-width: 200px;">{{restaurantdetail.instagram}}</td>
+                                    <th>Youtube</th>
+                                    <td style="max-width: 200px;">{{restaurantdetail.youtube}}</td>
+                                </tr>
+                                 <tr>
+                                    <th>Twitter</th>
+                                    <td style="max-width: 200px;">{{restaurantdetail.twitter}}</td>
+                                   
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--// Stats -->
+        </div>
+    </div>
+</div>
+
+<!-- <h2 class="main-title-w3layouts mb-2 text-center">Restaurant </h2> -->
+<!--// main-heading -->
+<!-- <div class="container-fluid"> -->
+<!-- </div> -->
+
+
+
+	
+{% endblock %}
